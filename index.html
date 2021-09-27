@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/calculator.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="calculator.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <div class="calculator">
+        <div class="equat">
+            <form id="equat" method="post">
+                <input type="text" name="a_val" id="aa" step="any" inputmode="decimal" min="-2147483648" max="2147483647" placeholder="1" autocomplete="off">х&sup2; +
+                <input type="text" name="b_val" id="bb" step=any inputmode="decimal" min="-2147483648" max="2147483647" placeholder="1" autocomplete="off">x +
+                <input type="text" name="c_val" id="cc" step=any inputmode="decimal" min="-2147483648" max="2147483647" placeholder="0" autocomplete="off"> = 0
+                <span class="calc_but"> 
+                    \--------<input type="button" value="Решить уравнение" id="calculate" >--------/
+                </span> 
+                <div id="roots" hidden> 
+                    <span>X<sub>1</sub> = </span><input type=text value="78" id="x1" readonly>
+                    <span>X<sub>2</sub> = </span><input type=text value="28" id="x2" readonly>
+                </div>
+                <div id="root" hidden> 
+                    <span>X = </span><input type=text value="78" id="xx" readonly>
+                </div>
+                <div id="mesa" hidden>
+                    <!-- <input display="inlineblock" value="Лол кек нет действительных корней" type=text id="Mesage" readonly="true">  -->
+                    Уравнение не имеет действительных решений. 
+                </div>
+                <div id="mesa2" hidden>
+                    <!-- <input display="inlineblock" value="Лол кек нет действительных корней" type=text id="Mesage" readonly="true">  -->
+                    Уравнение не является квадратным. 
+                </div><hr>
+                <sup><input type="button" value="✖" id="clear"></sup>
+            </form>
+        </div>
+        <!-- <hr> -->
+    <form id="calculator" method="post">
+        <input readonly type="text" name="expression" id="input" placeholder="" class="entryField"  autocomplete="off">
+        <input readonly type="text" name="result" id="output" placeholder="0" class="entryField" autocomplete="off">
+        <hr>
+        <div class="wrapper">
+            <!-- <input type="button" value="%" id="%" class="button left"> -->
+            <input type="button" value="CE" id="dltdigit" class="button top">
+            <input type="button" value="C" id="dltentry" class="button top">
+            <input type="button" value="&larr;" id="dltnum" class="button right top">
+            <input type="button" value="mod" id="%" class="button"> 
+            <input type="button" value="&sup1;&frasl;x" id="reverse" class="button left">
+            <input type="button" value="x&sup2;" id="powerTwo" class="button">
+            <input type="button" value="&divide;" id="/" class="button right">
+            <input type="button" value="7" id="7" class="button left">
+            <input type="button" value="8" id="8" class="button">
+            <input type="button" value="9" id="9" class="button">
+            <input type="button" value="*" id="*"class="button right">
+            <input type="button" value="4" id="4" class="button left">
+            <input type="button" value="5" id="5" class="button">
+            <input type="button" value="6" id="6" class="button">
+            <input type="button" value="&minus;" id="-" class="button right">
+            <input type="button" value="1" id="1" class="button left">
+            <input type="button" value="2" id="2" class="button">
+            <input type="button" value="3" id="3" class="button">
+            <input type="button" value="+" id="+" class="pus button right">
+            <input type="button" value="&plusmn;" id="plusmn" class="button left">
+            <input type="button" value="0" id="0" class="button">
+            <input type="button" value="." id="." class="button dot">
+            <input type="submit" value="=" id="equally" class="button right">
+        </div>
+        <div id="outputline"></div>
+        <div id="outputline2"></div>
+      </form>
+    </div>
+  </body>
+</html>
